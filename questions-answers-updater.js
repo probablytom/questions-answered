@@ -13,7 +13,7 @@ myDataRef.on('child_changed', function(snapshot) {
 });
 
 $("#add_question_button").click(submitQuestion(
-			$("new_question").text()
+			$("#new_question").text()
 ));
 
 function submitQuestion(question_text) {
