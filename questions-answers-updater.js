@@ -12,12 +12,12 @@ myDataRef.on('child_changed', function(snapshot) {
 	console.log(child_changed);
 });
 
-$("#add_question_button").click(submitQuestion(
-			$("#new_question").text()
-));
+$("#add_question_button").click( submitQuestion() );
 
-function submitQuestion(question_text) {
-	myDataRef.push({question_text: question_text, answer_text: null});
+function submitQuestion() {
+	var questionText = $("#new_question").val();
+	console.log(questionText);
+	myDataRef.push({'question_text': question_text, 'answer_text': null});
 }
 
 function submitAnswer(question_id, answer_text) {
